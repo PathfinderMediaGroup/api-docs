@@ -71,8 +71,6 @@ This request can be used in two ways. The first is to specify the trait, quality
 
 **Qualities**: `white`, `green`, `blue`, `purple`, `gold`.
 
-**Servers**: `eu`, `na`.
-
 **Languages**: `en`, `de`, `fr`.
 
 Note that changing the language parameter will only affect the search by item name. Meaning that if you send `de` as a language parameter, your query string will be compared against German item names instead of English ones.
@@ -88,5 +86,4 @@ Parameter | Description | Required | Default
 query | A search query | Yes | 
 trait | Item trait | No | null
 quality | Item quality | No | null
-server | Item server | No | null
 lang | Language to search in | No | 'en'
