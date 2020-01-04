@@ -31,11 +31,12 @@ Welcome to the PMG API documentation. Here you can see examples on how to intera
 
 ```php
 <?php
+    $token = 'YourTokenHere';
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'https://beast.pathfindermediagroup.com/api/auth');
     $headers = [
         'Content-Type:application/json',
-        'Authorization: Basic '.base64_encode('YourTokenHere'),
+        'Authorization: Bearer '.$token,
         ];
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -50,7 +51,7 @@ The endpoint in the example above can be used to test your authorization process
 
 The system expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: Basic base64encodedtoken`
+`Authorization: Bearer YourTokenHere`
 
 <aside class="notice">
 You must replace <code>YourTokenHere</code> with your personal API key.
